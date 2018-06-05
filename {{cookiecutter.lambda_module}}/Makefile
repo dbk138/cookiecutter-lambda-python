@@ -5,7 +5,7 @@ clean:
 	rm -rf dist
 
 # Build and package {{cookiecutter.lambda_name}}
-build-{{cookiecutter.lambda_module | replace('_', '-')}}:
+build-{{cookiecutter.lambda_name | replace('_', '-')}}:
 	mkdir -p dist/{{cookiecutter.lambda_name}}
 	zip -r ./dist/{{cookiecutter.lambda_name}}.zip ./{{cookiecutter.lambda_name}}/{{cookiecutter.lambda_name}}.py
 	python3 -m venv dist/{{cookiecutter.lambda_name}}
