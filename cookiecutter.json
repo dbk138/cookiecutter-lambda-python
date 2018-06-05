@@ -1,0 +1,7 @@
+{
+  "project_name": "New Lambda",
+  "lambda_name": "{{cookiecutter.project_name | lower | replace(' ', '_')}}",
+  "lambda_module": "{{cookiecutter.lambda_name}}",
+  "lambda_description": "A new lambda for doing things.",
+  "github_repo": "{{cookiecutter.lambda_name | replace('_', '-')}}"
+}
