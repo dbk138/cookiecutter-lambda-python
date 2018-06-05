@@ -4,8 +4,6 @@
 
 ## Components
 
-### {{cookiecutter.lambda_module | title()}}
-
 ## Testing
 
 ## Build and Package

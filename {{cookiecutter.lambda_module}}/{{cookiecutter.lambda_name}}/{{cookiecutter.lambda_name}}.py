@@ -1,10 +1,8 @@
-# -*- coding: utf-8 -*-
-
 """ Lambda entry point """
 
 
 def lambda_handler(event, context):
-    """
+    """Starting point for an AWS Lambda function
 
     Args:
         event: AWS Lambda uses this parameter to pass in event data to the handler.
@@ -14,7 +12,8 @@ def lambda_handler(event, context):
             This parameter is of the LambdaContext type.
 
     Returns:
+        A Hi message, of str type
 
     """
-    first_name = event['name']
-    return f'Hi {first_name}!'
+    name: str = event['name']
+    return f'Hi {name}!'

@@ -1,7 +1,6 @@
 # Lambda Cookiecutter in Python 3.6
 
 This cookiecutter provides a starting point for those wanting to use lambda functions in AWS.
-There is not much to the 
 
 ## Prerequisites
 

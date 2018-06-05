@@ -1,4 +1,4 @@
-.PHONY: clean build-{{cookiecutter.lambda_module | lower | replace('_', '-')}}
+.PHONY: clean build build-{{cookiecutter.lambda_module | lower | replace('_', '-')}}
 
 # Remove the distribution directory
 clean:
