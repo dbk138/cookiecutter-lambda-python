@@ -1,0 +1,32 @@
+service: {{cookiecutter.lambda_name | lower | replace('_','-')}}
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    usePipenv: false
+    dockerizePip: non-linux
+
+package:
+  individually: true
+  exclude: # Exclude these files from packaging and deployment to AWS Lambda
+    - bin/**
+    - node_modules/**
+    - .pytest_cache/**
+    - README.md
+    - package.json
+    - package-lock.json
+    - requirements.txt
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: {{cookiecutter.aws_region}}
+
+functions:
+  {{cookiecutter.lambda_name | lower | replace('_', '-')}}:
+    handler: {{cookiecutter.lambda_name}}.lambda_handler
+    module: {{cookiecutter.lambda_name}}
+    name: {{cookiecutter.lambda_name | lower | replace('_', '-')}}
+    timeout: 30 # Lambda timeout in seconds. The default is 3 seconds, the max is currently 300 (5 mins)

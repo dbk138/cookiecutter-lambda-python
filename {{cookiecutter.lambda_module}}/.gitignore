@@ -105,6 +105,12 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+# serverless
+.serverless/
+
+# npm
+node_modules/
+
 # IDE
 .idea
 *.iml

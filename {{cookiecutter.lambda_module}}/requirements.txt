@@ -1,2 +1,3 @@
 pytest
 pytest-mock
+-r {{cookiecutter.lambda_name}}.requirements.txt

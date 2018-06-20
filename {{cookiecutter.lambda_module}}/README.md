@@ -2,18 +2,23 @@
 
 {{cookiecutter.lambda_description}}
 
+## Requirements
+
+* [Python](https://www.python.org/) >= 3.6
+* [NPM](https://www.npmjs.com/get-npm) - for installing serverless.
+* [Serverless](https://serverless.com/) - for deploying to AWS.
+* AWS Account and Credentials
+
 ## Components
 
 ## Testing
 
-## Build and Package
+## Build, Package, and Deploy
 
-In order to build and deploy our AWS Lambdas we need to zip them up along with all of their dependencies
-and store them in a location within S3. Currently we are using Make until a better approach is implemented.
-To run Makefiles simply execute the command `make` on the command line. The following are the available make commands:
+In order to build and deploy our AWS Lambdas we need to zip them up along with all of their dependencies. 
+[Serverless](https://serverless.com/) allows us to accomplish that with ease. It can easily be swapped out for 
+another approach. The following are the available commands:
 
 | Command                       | Description                                                                                                                                     
 | ------------------------------| ----------------------------------------------------------------------|
-| `make clean`                  | Removes the `dist` directory.                                         |     
-| `make {{cookiecutter.lambda_name | replace('_', '-')}}`| Zips up the lambda and places it at the root of the dist directory.   |                      
-| `make build`                  | Cleans the dist directory and zips up all lambdas.                    |
+| `serverless deploy`           | Deploy the lambdas that you've created                                |     

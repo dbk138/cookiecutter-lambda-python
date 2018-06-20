@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Setup script to install serverless and any necessary plugins
+npm install -g serverless
+sls plugin install -n serverless-python-requirements
